@@ -1,0 +1,12 @@
+body{
+    background-color:black; 
+}
+
+#nav .menuItem img{   
+    float: left;
+}
+
+
+#nav .menuItem{   
+    display: inline;
+}
