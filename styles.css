@@ -10,3 +10,8 @@ body{
 #nav .menuItem{   
     display: inline;
 }
+
+
+#nav .menuItem img{   
+    float: left;
+}
