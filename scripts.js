@@ -12,6 +12,12 @@ function addAnimation(scrollers){
             duplicatedItem.setAttribute("aria-hidden",true);
             scrollerInner.appendChild(duplicatedItem);
         });
+        scrollerContent.forEach(item =>{
+            const duplicatedItem = item.cloneNode(true);
+            //stoppers screen reader from constantly reading out the list
+            duplicatedItem.setAttribute("aria-hidden",true);
+            scrollerInner.appendChild(duplicatedItem);
+        });
     });
 }
 function scroller(){
@@ -33,11 +39,10 @@ function portfolio(project){
         <button class="moreInfo border bg-gray-500 p-1 info">More Info</button>
         <a class="ml-24 text-right" href="${project.github}"><i class="fa-brands fa-github"></i></a>
         <a class="text-right" href="${project.link}"><i class="fa-regular fa-file"></i></a><br>
-        <p class="toggle hidden"> Contributor: ${project.contributors} </p>
+        <p class="toggle hidden"> Contributors: ${project.contributors} </p>
         <p class="toggle hidden"> Dependencies: ${project.dependencies}</p>
     </div>
     `
-    
 
 }
 function setPortfolioButton(){
@@ -59,10 +64,10 @@ function getJson(){
     }).then((data)=>{
         data.projects.forEach((project)=>{
             portfolio(project)
-            setPortfolioButton()
             
         })
         scroller()
+        setPortfolioButton()
     })
 }
 
