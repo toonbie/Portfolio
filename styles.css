@@ -16,11 +16,14 @@ body{
 #nav .menuItem img{   
     float: left;
 }
-.homeMain{
+.navBarMain{
     z-index: 2;
 }
 .videoSection video{
-    z-index: -1;
+    z-index: -2;
+}
+.videoSection button{
+    z-index: 0;
 }
 .scroller{
     max-width: 100%;
@@ -68,7 +71,7 @@ body{
 
 @keyframes scroll {
     to {
-        transform: translate(calc(-50% - 1rem));
+        transform: translate(calc(-33% - 0.65rem));
     }
 }
 
