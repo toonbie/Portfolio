@@ -2,7 +2,7 @@ function addAnimation(scrollers){
     scrollers.forEach((scroller) => {
         //plays animation only if the person has reduced motion off 
         scroller.setAttribute("data-animated", true);
-
+        scroller.setAttribute("data-animation", "play");
         const scrollerInner = scroller.querySelector(".scroller__inner");
         const scrollerContent = Array.from(scrollerInner.children);
 
@@ -89,28 +89,47 @@ function navButton(){
     })
 }
 
-function videoPause(){
-    const videoPauses = document.querySelectorAll(".videoPause")
-    videoPauses.forEach((pause)=>{
-        pause.addEventListener("click",(e)=>{
-            const video = pause.parentElement.querySelector("video")
-            if (pause.classList.contains("pause")){
+function videoControl(){
+    const videoControl = document.querySelectorAll(".videoPause")
+    videoControl.forEach((control)=>{
+        control.addEventListener("click",(e)=>{
+            const video = control.parentElement.querySelector("video")
+            if (control.classList.contains("pause")){
                 video.pause()
-                pause.classList.toggle("pause")
-                pause.classList.toggle("play")
-                pause.innerHTML = `<i class="fa-solid fa-pause"></i>`
+                control.classList.toggle("pause")
+                control.classList.toggle("play")
+                control.innerHTML = `<i class="fa-solid fa-pause"></i>`
             }
-            else if(pause.classList.contains("play")){
+            else if(control.classList.contains("play")){
                 video.play()
-                pause.classList.toggle("pause")
-                pause.classList.toggle("play")
-                pause.innerHTML = `<i class="fa-solid fa-play"></i>`
+                control.classList.toggle("pause")
+                control.classList.toggle("play")
+                control.innerHTML = `<i class="fa-solid fa-play"></i>`
             }
         });
 
     });
 }
 
+function scrollerButtons(){
+    const leftArrow = document.querySelector(".leftScroll")
+    const rightArrow = document.querySelector(".rightScroll")
+    const scrollerControl = document.querySelector(".control")
+    const animation = document.querySelector(".scroller")
+    scrollerControl.addEventListener("click",(e)=>{
+        if(animation.dataset.animation==="play"){
+            animation.dataset.animation = "stop"
+            scrollerControl.innerHTML = `<i class="fa-solid fa-pause"></i>`
+
+        }
+        else if (animation.dataset.animation==="stop"){
+            animation.dataset.animation = "play"
+            scrollerControl.innerHTML = `<i class="fa-solid fa-play"></i>`
+        }
+    });
+}
+
 getJson()
 navButton()
-videoPause()
+videoControl()
+scrollerButtons()
