@@ -16,7 +16,12 @@ body{
 #nav .menuItem img{   
     float: left;
 }
-
+.homeMain{
+    z-index: 2;
+}
+.videoSection video{
+    z-index: -1;
+}
 .scroller{
     max-width: 100%;
 }
@@ -66,5 +71,4 @@ body{
         transform: translate(calc(-50% - 1rem));
     }
 }
-
 

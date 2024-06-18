@@ -50,4 +50,13 @@ function getJson(){
     })
 }
 
+function navButton(){
+    const navButton = document.querySelector(".navchange")
+    const menu = document.querySelector(".floatingNav")
+    navButton.addEventListener("click",(e)=>{
+        menu.classList.toggle("hidden")
+    })
+}
+
 getJson()
+navButton()

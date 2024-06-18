@@ -9,38 +9,51 @@
     <script defer src="scripts.js"></script>
     <title>Home</title>
 </head>
-<body>
-    <header>
-        <div class="flex bg-orange-500 w-screen gap-4 " id="nav">
-            <div class="menuItem mx-4 my-2">
-                <img src="https://placeholder.pics/svg/100x100">
-                    <a  href="#nav"></a>
-                </img>
+<body id="top">
+    <div class="homeMain" id="Main">
+    <header class="navBarMain sticky top-0">
+        <div class="flex bg-orange-500 w-screen gap-4" id="nav">
+            <div class="menuItem mx-4 my-1">
+                    <a  href="index.html#top"><img src="https://placeholder.pics/svg/80x80"></a>
             </div>
-            <div class="flex gap-16 w-screen my-2 items-center justify-evenly hidden ">
+            <div class="flex gap-8 w-full my-2 items-center justify-evenly hidden md:flex ">
                 <div class="menuItem ">
-                    <a href="#nav">Home</a>
+                    <a href="index.html#top">Home</a>
                 </div>
                 <div class="menuItem ">
-                    <a href="#nav">About me</a>
+                    <a href="about.html">About me</a>
                 </div>
                 <div class="menuItem ">
-                    <a href="#nav">Contact me</a>
+                    <a href="contact.html">Contact me</a>
                 </div>
-                <div class="menuItem float-right ">
-                    <button>Download CV</button>
+                <div class="menuItem float-right rounded-full bg-black py-2 px-3 ">
+                    <button>Download CV <i class="fa-solid fa-download rounded-full bg-white text-black p-1 "></i></button>
                 </div>
             </div>
-            <div class="flex menuItem w-screen items-center my-5 mr-5">
-                <button class="float-right">    
+            <div class="flex menuItem items-center md:hidden absolute left-32 right-4 top-7">
+                <button class="navchange float-right md:hidden">    
                     <img src="menu-svgrepo-com.svg" width=50 height=50>
                 </button>
             </div>
         </div>
+        <div class="floatingNav flex flex-col w-5/6 py-4 gap-4 items-center text-center justify-evenly bg-orange-500 absolute right-0 md:hidden">
+            <div class="menuItem w-full">
+                <a href="index.html#top">Home</a>
+            </div>
+            <div class="menuItem w-full">
+                <a href="about.html">About me</a>
+            </div>
+            <div class="menuItem w-full ">
+                <a href="contact.html">Contact me</a>
+            </div>
+            <div class="menuItem float-right rounded-full bg-black py-2 px-3">
+                <button>Download CV <i class="fa-solid fa-download rounded-full bg-white text-black p-1 "></i></button>
+            </div>
+        </div>
     </header>
-    <section>
+    <section class="videoSection">
     <div class="flex flex-col">
-        <video width="100%" height="80%" autoplay muted controls> 
+        <video width="100%" height="80%" autoplay muted > 
             <source src="portfolioVideo.mp4" type="video/mp4">
             Your browsers does not support video
         </video>
@@ -76,5 +89,6 @@
             </div>
         </div>
     </section>
+    </div>
 </body>
 </html>
