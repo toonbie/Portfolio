@@ -52,8 +52,16 @@ function getJson(){
 
 function navButton(){
     const navButton = document.querySelector(".navchange")
+    const mobileHome = document.querySelector(".home2")
+    const navClose = document.querySelector(".navClose")
     const menu = document.querySelector(".floatingNav")
     navButton.addEventListener("click",(e)=>{
+        menu.classList.toggle("hidden")
+    })
+    mobileHome.addEventListener("click",(e)=>{
+        menu.classList.toggle("hidden")
+    })
+    navClose.addEventListener("click",(e)=>{
         menu.classList.toggle("hidden")
     })
 }
