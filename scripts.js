@@ -33,15 +33,15 @@ function portfolio(project){
     portfolio.innerHTML += 
     `
     <div class="flex flex-col">
-        <button class="newPage hover:underline">
+        <button class="newPage hover:underline" aria-label="Put portfolio onto new page">
         <h1 class="title">${project.title}</h1>
-        <img src="${project.image}" height=150px width=200px>
+        <img src="${project.image}" height=150px width=200px alt="Screenshot of portfolio">
         <p>${project.description}</p>
         </button>
         <div>
-            <button class="moreInfo border bg-gray-500 p-1 info">More Info</button>
-            <a class="ml-24 text-right" href="${project.github}"><i class="text-right fa-brands fa-github"></i></a>
-            <a class="text-right" href="${project.link}"><i class="text-right fa-regular fa-file"></i></a><br>
+            <button class="moreInfo border bg-gray-500 p-1 info" aria-label="more information">More Info</button>
+            <a class="ml-24 text-right" href="${project.github}" aria-label="github Link"><i class="text-right fa-brands fa-github"alt="github icon"></i></a>
+            <a class="text-right" href="${project.link}" aria-label="Project link"><i class="text-right fa-regular fa-file" alt="page icon"></i></a><br>
         </div>
     
         <p class="toggle hidden">Contributors:${project.contributors}</p>
@@ -70,14 +70,12 @@ function setNewPageButton(projects){
         projects.forEach((project)=>{
             if(project.title === jsonTitle){
                 projectMatch = project
-                console.log(projectMatch)
             }
         })
         const head = document.head.innerHTML
         head.title = projectMatch.title
         refreshers = document.body.querySelectorAll(".home")
         refreshers.forEach((button)=>{
-            console.log(button);
             button.href="javascript:location.reload(true)";
         });
         const header = document.body.querySelector("header").innerHTML
@@ -129,6 +127,7 @@ function navButton(){
     const mobileHome = document.querySelector(".home2")
     const navClose = document.querySelector(".navClose")
     const menu = document.querySelector(".floatingNav")
+    const downloads = document.querySelectorAll(".download")
     navButton.addEventListener("click",(e)=>{
         menu.classList.toggle("hidden")
     })
@@ -137,6 +136,14 @@ function navButton(){
     })
     navClose.addEventListener("click",(e)=>{
         menu.classList.toggle("hidden")
+    })
+    downloads.forEach((download)=>{
+        download.addEventListener("click",(e)=>{
+            if (confirm("Are you sure you want to download? ")){
+                console.log("ok")
+            }else{
+            }
+        })
     })
 }
 
@@ -163,8 +170,8 @@ function videoControl(){
 }
 
 function scrollerButtons(){
-    const leftArrow = document.querySelector(".leftScroll")
-    const rightArrow = document.querySelector(".rightScroll")
+    const slowArrow = document.querySelector(".slowScroll")
+    const fastArrow = document.querySelector(".fastScroll")
     const scrollerControl = document.querySelector(".control")
     const animation = document.querySelector(".scroller")
     scrollerControl.addEventListener("click",(e)=>{
@@ -178,11 +185,19 @@ function scrollerButtons(){
             scrollerControl.innerHTML = `<i class="fa-solid fa-play"></i>`
         }
     });
-    leftArrow.addEventListener("click",(e)=>{
-        animation.dataset.direction="left"
+    slowArrow.addEventListener("click",(e)=>{
+        if (animation.dataset.duration==="normal"){
+            animation.dataset.duration="slow"
+        }else if(animation.dataset.duration==="fast"){
+            animation.dataset.duration="normal"
+        }
     })
-    rightArrow.addEventListener("click",(e)=>{
-        animation.dataset.direction="right"
+    fastArrow.addEventListener("click",(e)=>{
+        if (animation.dataset.duration==="normal"){
+            animation.dataset.duration="fast"
+        }else if(animation.dataset.duration==="slow"){
+            animation.dataset.duration="normal"
+        }
     })
 }
 

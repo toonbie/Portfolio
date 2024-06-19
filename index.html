@@ -14,42 +14,42 @@
     <header class="navBarMain sticky top-0">
         <div class="flex bg-orange-500 w-screen gap-4 text-s font-mono">
             <div class="menuItem mx-1 my-1 ">
-                    <a class="home" href="index.html#top"><img class="logoButton transition-transform hover:scale-110" src="https://placeholder.pics/svg/100x50"></a>
+                    <a class="home" href="index.html#top"><img class="logoButton transition-transform hover:scale-110" src="https://placeholder.pics/svg/100x50" alt="home navigation"></a>
             </div>
             <div class="flex gap-8 w-full my-1 items-center justify-evenly hidden md:flex ">
                 <div class="menuItem">
-                    <a class="home py-2 px-3 text-2xl hover:bg-orange-300 hover:text-black hover:underline" href="index.html#top">Home</a>
+                    <a class="home py-2 px-3 text-2xl hover:bg-orange-300 hover:text-black hover:underline" href="index.html#top" alt="home navigation">Home</a>
                 </div>
                 <div class="menuItem ">
-                    <a class="py-2 px-3 text-2xl hover:bg-orange-300 hover:text-black hover:underline" href="about.html">About me</a>
+                    <a class="py-2 px-3 text-2xl hover:bg-orange-300 hover:text-black hover:underline" href="about.html" alt="about navigation">About me</a>
                 </div>
                 <div class="menuItem ">
-                    <a class="py-2 px-3 text-2xl hover:bg-orange-300 hover:text-black hover:underline" href="contact.html">Contact me</a>
+                    <a class="py-2 px-3 text-2xl hover:bg-orange-300 hover:text-black hover:underline" href="contact.html" alt="contact navigation">Contact me</a>
                 </div>
                 <div class="menuItem float-right rounded-full bg-black py-2 px-3 mr-2 ">
-                    <button>Download CV <i class="fa-solid fa-download rounded-full bg-white text-black p-1 "></i></button>
+                    <button class="download">Download CV <i class="fa-solid fa-download rounded-full bg-white text-black p-1 " alt="download button"></i></button>
                 </div>
             </div>
             <div class="flex menuItem items-center md:hidden absolute right-0 top-2">
-                <button class="navchange float-right md:hidden">   
-                    <img src="menu-svgrepo-com.svg" width=50 height=50>
+                <button class="navchange float-right md:hidden" alt="menu toggle">   
+                    <img src="menu-svgrepo-com.svg" alt="menu icon" width=50 height=50>
                 </button>
             </div>
         </div>
         <div class="floatingNav flex flex-col w-5/6 py-2 gap-8 items-right text-right justify-evenly bg-orange-500 absolute right-0 hidden">
             <div class="menuItem w-full mt-2">
-                <a class="home home2 p-4 hover:bg-orange-300 hover:text-black hover:underline" href="index.html#top">Home</a>
+                <a class="home home2 p-4 hover:bg-orange-300 hover:text-black hover:underline" href="index.html#top" alt="home navigation">Home</a>
             </div>
             <div class="menuItem w-full">
-                <a class="p-4 hover:bg-orange-300 hover:text-black hover:underline" href="about.html">About me</a>
+                <a class="p-4 hover:bg-orange-300 hover:text-black hover:underline" href="about.html" alt="about navigation">About me</a>
             </div>
             <div class="menuItem w-full ">
-                <a class="p-4 hover:bg-orange-300 hover:text-black hover:underline " href="contact.html">Contact me</a>
+                <a class="p-4 hover:bg-orange-300 hover:text-black hover:underline " href="contact.html" alt="contact navigation">Contact me</a>
             </div>
             <div class="menuItem float-right ">
-                <button class="rounded-full bg-black py-2 px-3">Download CV <i class="fa-solid fa-download rounded-full bg-white text-black p-1 "></i></button>
+                <button class="download rounded-full bg-black py-2 px-3">Download CV <i class="fa-solid fa-download rounded-full bg-white text-black p-1" alt="download button"></i></button>
             </div>
-            <button class="navClose absolute top-2 -left-16 text-4xl rounded-full bg-gray-800 p-2"><i class="fa-regular fa-circle-xmark"></i></button>
+            <button class="navClose absolute top-2 -left-16 text-4xl rounded-full bg-gray-800 p-2" alt="close navigation"><i class="fa-regular fa-circle-xmark"></i></button>
         </div>
     </header>
 
@@ -59,7 +59,7 @@
             <source src="portfolioVideo.mp4" type="video/mp4">
             Your browsers does not support video
         </video>
-        <button class="videoPause pause text-4xl text-end text-black absolute bottom-4 right-4 bg-white p-2 rounded-full"><i class="fa-solid fa-play"></i></i></button>
+        <button class="videoPause pause text-4xl text-end text-black absolute bottom-4 right-4 bg-white p-2 rounded-full"><i class="fa-solid fa-play" aria-label="toggle video pause/play"></i></i></button>
     </div>
     <div class="flex flex-col mt-16 mx-8 mb-4">
         <h1 class="text-5xl my-2 mt-4">About me</h1>
@@ -70,7 +70,7 @@
     </section>
     <section>
     <div class="flex flex-col mt-16 mx-8 mb-4">
-        <img class="w-screen" src="https://placeholder.pics/svg/600x300">
+        <img class="w-screen" src="https://placeholder.pics/svg/600x300" alt="Contact banner placeholder">
         <h1 class="text-5xl my-2">Contact me</h1>
         <p class="text-2l">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde molestias corrupti veniam et maiores! Nisi quasi odio non animi. Expedita quis pariatur exercitationem iusto cupiditate rerum aliquid deleniti doloribus earum!</p>
         <i class="text-base text-slate-400">Flavour Text</i>
@@ -83,14 +83,14 @@
             <h1 class="text-5xl my-2">Portfolio</h1>
             <div class="scroller flex flex-col">
                 <div class="tag-list scroller__inner portfolio">
-                    <img  src="https://placeholder.pics/svg/250x300">
+                    <img  src="https://placeholder.pics/svg/250x300" alt="placeholder image">
                 </div>
             </div>
             <div class="flex gap-2 justify-center mb-8">
                 <!-- Place Holder for control buttons -->
-                <button class="leftScroll text-3xl text-end text-black bg-white py-1 px-2 rounded-full"><i class="fa-solid fa-arrow-left"></i></button>
-                <button class="control text-3xl text-end text-black bg-white py-1 px-2 rounded-full"><i class="fa-solid fa-play"></i></button>
-                <button class="rightScroll text-3xl text-end text-black  bg-white py-1 px-2 rounded-full"><i class="fa-solid fa-arrow-right"></i></button>
+                <button class="slowScroll text-3xl text-end text-black bg-white py-1 px-2 rounded-full"aria-label="slow down button"><i class="fa-solid fa-backward"></i></i></button>
+                <button class="control text-3xl text-end text-black bg-white py-1 px-2 rounded-full" aria-label="pause button"><i class="fa-solid fa-play"></i></button>
+                <button class="fastScroll text-3xl text-end text-black  bg-white py-1 px-2 rounded-full" aria-label="speed up button"><i class="fa-solid fa-forward"></i></button>
             </div>
         </div>
     </section>
