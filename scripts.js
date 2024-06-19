@@ -33,19 +33,21 @@ function portfolio(project){
     portfolio.innerHTML += 
     `
     <div class="flex flex-col">
-        <h1>${project.title}</h1>
+        <button class="newPage hover:underline">
+        <h1 class="title">${project.title}</h1>
         <img src="${project.image}" height=150px width=200px>
         <p>${project.description}</p>
+        </button>
         <div>
             <button class="moreInfo border bg-gray-500 p-1 info">More Info</button>
-            <a class="ml-24 text-right" href="${project.github}"><i class="fa-brands fa-github"></i></a>
-            <a class="text-right" href="${project.link}"><i class="fa-regular fa-file"></i></a><br>
+            <a class="ml-24 text-right" href="${project.github}"><i class="text-right fa-brands fa-github"></i></a>
+            <a class="text-right" href="${project.link}"><i class="text-right fa-regular fa-file"></i></a><br>
         </div>
+    
         <p class="toggle hidden">Contributors:${project.contributors}</p>
         <p class="toggle hidden">Dependencies:${project.dependencies}</p>
     </div>
     `
-
 }
 function setPortfolioButton(){
     const buttons = document.querySelectorAll(".moreInfo")
@@ -60,6 +62,52 @@ function setPortfolioButton(){
     });
 }
 
+function setNewPageButton(projects){
+    const buttons = document.querySelectorAll(".newPage")
+    buttons.forEach((button)=>{
+        const jsonTitle = button.parentElement.querySelector(".title").textContent
+        var projectMatch = NaN
+        projects.forEach((project)=>{
+            if(project.title === jsonTitle){
+                projectMatch = project
+                console.log(projectMatch)
+            }
+        })
+        const head = document.head.innerHTML
+        head.title = projectMatch.title
+        refreshers = document.body.querySelectorAll(".home")
+        refreshers.forEach((button)=>{
+            console.log(button);
+            button.href="javascript:location.reload(true)";
+        });
+        const header = document.body.querySelector("header").innerHTML
+        refreshers = document.body.querySelectorAll(".home")
+        button.addEventListener("click",(e)=>{
+            var opened = window.open("",target="_parent");
+            opened.document.write(
+                `
+                ${head}
+                ${header}
+                <div class="flex flex-col">
+                    <h1 class="title">${projectMatch.title}</h1>
+                    <img src="${projectMatch.image} ">
+                        <p>${projectMatch.description}</p>
+                    <div class="grid grid-cols-2 items-center gap-4">
+                        <p>Contributors:${projectMatch.contributors}</p>
+                        <a class="text-right" href="${projectMatch.github}"><i class="text-right fa-brands fa-github"></i></a>
+                        <p>Dependencies:${projectMatch.dependencies}</p>
+                        <a class="text-right" href="${projectMatch.link}"><i class="text-right fa-regular fa-file"></i></a><br>
+                    </div>
+
+                </div>
+                `
+                
+            );
+        })
+
+    });
+}
+
 function getJson(){
     fetch('portfolio.json').then((res)=>{
         return res.json()
@@ -70,6 +118,7 @@ function getJson(){
         })
         scroller()
         setPortfolioButton()
+        setNewPageButton(data.projects)
     })
 }
 
@@ -127,6 +176,12 @@ function scrollerButtons(){
             scrollerControl.innerHTML = `<i class="fa-solid fa-play"></i>`
         }
     });
+    leftArrow.addEventListener("click",(e)=>{
+        animation.dataset.direction="left"
+    })
+    rightArrow.addEventListener("click",(e)=>{
+        animation.dataset.direction="right"
+    })
 }
 
 getJson()
