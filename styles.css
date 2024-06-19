@@ -32,7 +32,7 @@ body{
     padding-block: 1rem ;
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 3rem;
 }
 .scroller[data-animated="true"]{
     overflow: hidden;
@@ -77,11 +77,16 @@ body{
 
 @keyframes scroll {
     to {
-        transform: translate(calc(-33% - 0.667rem));
+        transform: translate(calc(-33% - 1rem));
     }
 }
-
-
+.portfolio div{
+    text-overflow: ellipsis "[..]";
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 250px;
+    max-height: 300px;
+}
 input[type=text]{
     width: 100%;
     padding: 12px; 
@@ -89,7 +94,7 @@ input[type=text]{
     border-radius: 4px; 
     margin-top: 6px;
     margin-bottom: 16px;
-  }
+}
 
 textarea{
     width: 100%;
