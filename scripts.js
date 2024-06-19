@@ -39,7 +39,7 @@ function portfolio(project){
         <p>${project.description}</p>
         </button>
         <div>
-            <button class="moreInfo border bg-gray-500 p-1 info" aria-label="more information">More Info</button>
+            <button class="moreInfo border bg-gray-500 hover:bg-gray-300 p-1 info" aria-label="more information">More Info</button>
             <a class="ml-24 text-right" href="${project.github}" aria-label="github Link"><i class="text-right fa-brands fa-github"alt="github icon"></i></a>
             <a class="text-right" href="${project.link}" aria-label="Project link"><i class="text-right fa-regular fa-file" alt="page icon"></i></a><br>
         </div>
@@ -213,7 +213,6 @@ function scrollTextAnimate(){
     hiddenElement.forEach((element)=> observer.observe(element));
 }
 scrollTextAnimate()
-
 getJson()
 navButton()
 videoControl()
