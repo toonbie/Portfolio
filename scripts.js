@@ -3,6 +3,7 @@ function addAnimation(scrollers){
         //plays animation only if the person has reduced motion off 
         scroller.setAttribute("data-animated", true);
         scroller.setAttribute("data-animation", "play");
+        scroller.setAttribute("data-duration","normal");
         const scrollerInner = scroller.querySelector(".scroller__inner");
         const scrollerContent = Array.from(scrollerInner.children);
 
