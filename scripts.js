@@ -201,6 +201,19 @@ function scrollerButtons(){
     })
 }
 
+function scrollTextAnimate(){
+    const observer = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+            if (entry.isIntersecting){
+                entry.target.classList.add("show")
+            }
+        })
+    });
+    const hiddenElement= document.querySelectorAll(".scrollHide");
+    hiddenElement.forEach((element)=> observer.observe(element));
+}
+scrollTextAnimate()
+
 getJson()
 navButton()
 videoControl()
