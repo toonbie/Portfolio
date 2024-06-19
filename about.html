@@ -9,15 +9,15 @@
         <script defer src="scripts.js"></script>
         <title>About me</title>
     </head>
-<body>
+<body class="bg-cover bg-gradient-to-b from-black to-gray-900">
     <header class="navBarMain sticky top-0">
-        <div class="flex bg-orange-500 w-screen gap-4 font-mono">
-            <div class="menuItem mx-4 my-1 ">
-                    <a href="index.html#top"><img class="logoButton transition-transform hover:scale-110" src="https://placeholder.pics/svg/100x50"></a>
+        <div class="flex bg-orange-500 w-screen gap-4 text-s font-mono">
+            <div class="menuItem mx-1 my-1 ">
+                    <a class="home" href="index.html#top"><img class="logoButton transition-transform hover:scale-110" src="https://placeholder.pics/svg/100x50"></a>
             </div>
             <div class="flex gap-8 w-full my-1 items-center justify-evenly hidden md:flex ">
                 <div class="menuItem">
-                    <a class="py-2 px-3 text-2xl hover:bg-orange-300 hover:text-black hover:underline" href="index.html#top">Home</a>
+                    <a class="home py-2 px-3 text-2xl hover:bg-orange-300 hover:text-black hover:underline" href="index.html#top">Home</a>
                 </div>
                 <div class="menuItem ">
                     <a class="py-2 px-3 text-2xl hover:bg-orange-300 hover:text-black hover:underline" href="about.html">About me</a>
@@ -25,7 +25,7 @@
                 <div class="menuItem ">
                     <a class="py-2 px-3 text-2xl hover:bg-orange-300 hover:text-black hover:underline" href="contact.html">Contact me</a>
                 </div>
-                <div class="menuItem float-right rounded-full bg-black py-2 px-3 ">
+                <div class="menuItem float-right rounded-full bg-black py-2 px-3 mr-2 ">
                     <button>Download CV <i class="fa-solid fa-download rounded-full bg-white text-black p-1 "></i></button>
                 </div>
             </div>
@@ -35,9 +35,9 @@
                 </button>
             </div>
         </div>
-        <div class="floatingNav flex flex-col w-5/6 py-2 gap-8 items-right text-right justify-evenly bg-orange-500 absolute right-0 md:hidden">
+        <div class="floatingNav flex flex-col w-5/6 py-2 gap-8 items-right text-right justify-evenly bg-orange-500 absolute right-0 hidden">
             <div class="menuItem w-full mt-2">
-                <a class="home2 p-4 hover:bg-orange-300 hover:text-black hover:underline" href="index.html#top">Home</a>
+                <a class="home home2 p-4 hover:bg-orange-300 hover:text-black hover:underline" href="index.html#top">Home</a>
             </div>
             <div class="menuItem w-full">
                 <a class="p-4 hover:bg-orange-300 hover:text-black hover:underline" href="about.html">About me</a>
@@ -52,11 +52,19 @@
         </div>
     </header>
     <img src="https://placeholder.pics/svg/800x400" width=100%>
-    <h1 class="text-5xl my-2">About me</h1>
+    <div class="m-8">
+    <h1 class="text-5xl my-6">About me</h1>
+    <img src="https://placeholder.pics/svg/200x200">
     <p class="text-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde molestias corrupti veniam et maiores! Nisi quasi odio non animi. Expedita quis pariatur exercitationem iusto cupiditate rerum aliquid deleniti doloribus earum!</p>
-    <h1 class="text-5xl my-2">Skills</h1>
-    <p class="text-2xl my-2">Error 404 not found</p>
-    <h1 class="text-5xl my-2">Certifications</h1>
-    <p class="text-2xl my-2">content goes here</p>
+    <h1 class="text-5xl my-6">Skills</h1>
+    <div class="flex gap-8 text-8xl justify-center">
+        <i class="fa-brands fa-js w-22 h-22 border p-2 text-center hover:text-gray-400"></i>
+        <i class="fa-brands fa-java w-22 h-22 border p-2 text-center hover:text-gray-400"></i>
+        <i class="fa-brands fa-python w-22 h-22 border p-2 text-center hover:text-gray-400"></i>
+        <i class="fa-brands fa-php w-22 h-22 border p-2 text-center hover:text-gray-400"></i>
+    </div>
+    <h1 class="text-5xl my-6">Certifications</h1>
+    <p class="text-2xl my-6">content goes here</p>
+    </div>
 </body>
 </html>

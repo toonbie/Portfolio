@@ -88,20 +88,23 @@ function setNewPageButton(projects){
                 `
                 ${head}
                 ${header}
+                <body class="bg-cover bg-gradient-to-b from-black to-gray-900">
                 <div class="flex flex-col gap-8 mt-16 items-center content-center mx-8">
                     <h1 class="w-screen title text-5xl text-center">${projectMatch.title}</h1>
                     <img class="w-screen" src="${projectMatch.image} ">
                         <p class="text-2xl">${projectMatch.description}</p>
-                    <div class=" grid grid-cols-2 items-center gap-1 text-2xl justify-items-center m-8">
+                    <div class=" grid grid-cols-2 items-center gap-2 text-2xl justify-items-center m-8">
                         <p>Contributors:${projectMatch.contributors}</p>
                         <a class=" text-center w-fit" href="${projectMatch.github}"><i class="text-right fa-brands fa-github"></i></a>
                         <p>Dependencies:${projectMatch.dependencies}</p>
                         <a class=" text-center w-fit" href="${projectMatch.link}"><i class="text-right fa-regular fa-file"></i></a><br>
                     </div>
                 </div>
+                </body>
                 `
                 
             );
+            navButton()
         })
 
     });
