@@ -13,12 +13,6 @@ function addAnimation(scrollers){
             duplicatedItem.setAttribute("aria-hidden",true);
             scrollerInner.appendChild(duplicatedItem);
         });
-        scrollerContent.forEach(item =>{
-            const duplicatedItem = item.cloneNode(true);
-            //stoppers screen reader from constantly reading out the list
-            duplicatedItem.setAttribute("aria-hidden",true);
-            scrollerInner.appendChild(duplicatedItem);
-        });
     });
 }
 function scroller(){

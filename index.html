@@ -55,23 +55,23 @@
 
     <section class="videoSection">
     <div class="relative">
-        <video width="100%" height="80%" autoplay muted > 
+        <video width="100%" autoplay muted > 
             <source src="portfolioVideo.mp4" type="video/mp4">
             Your browsers does not support video
         </video>
-        <button class="videoPause pause text-4xl text-end text-black absolute bottom-4 right-4 bg-white p-2 rounded-full"><i class="fa-solid fa-play" aria-label="toggle video pause/play"></i></i></button>
-    </div>
-    <div class="flex flex-col mt-16 mx-8 mb-4">
-        <h1 class="text-5xl my-2 mt-4 scrollHide">About me</h1>
-        <p class="text-2l">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde molestias corrupti veniam et maiores! Nisi quasi odio non animi. Expedita quis pariatur exercitationem iusto cupiditate rerum aliquid deleniti doloribus earum!</p>
-        <i class="text-base text-slate-400">Flavour Text</i>
-        <a class="text-left border w-fit mt-2 p-1 bg-gray-800 hover:bg-gray-600 " href="about.html">Want to know more</a>
+        <button class="videoPause pause text-4xl text-end text-black absolute md:bottom-4 right-4 bg-white p-2 rounded-full "><i class="fa-solid fa-play" aria-label="toggle video pause/play"></i></i></button>
+        <div class="flex flex-col mt-16 mx-8 mb-4 md:mt-0 md:bottom-16 md:absolute md:max-w-[70%] ">
+            <h1 class="text-5xl my-2 mt-4 scrollHide mb-8">About me</h1>
+            <p class="text-2l">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde molestias corrupti veniam et maiores! Nisi quasi odio non animi. Expedita quis pariatur exercitationem iusto cupiditate rerum aliquid deleniti doloribus earum!</p>
+            <i class="text-base text-slate-400">Flavour Text</i>
+            <a class="text-left border w-fit mt-2 p-1 bg-gray-800 hover:bg-gray-600 " href="about.html">Want to know more</a>
+        </div>
     </div>
     </section>
     <section>
-    <img class="w-screen sm:max-w-fit sm:mx-auto" src="https://placeholder.pics/svg/600x300" alt="Contact banner placeholder">
+    <img class="w-screen sm:max-w-fit sm:mx-auto my-16" src="https://placeholder.pics/svg/600x300" alt="Contact banner placeholder">
     <div class="flex flex-col mt-16 mx-8 mb-4">
-        <h1 class="text-5xl my-2 scrollHide">Contact me</h1>
+        <h1 class="text-5xl my-2 scrollHide mb-8">Contact me</h1>
         <p class="text-2l">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde molestias corrupti veniam et maiores! Nisi quasi odio non animi. Expedita quis pariatur exercitationem iusto cupiditate rerum aliquid deleniti doloribus earum!</p>
         <i class="text-base text-slate-400">Flavour Text</i>
         <a class="text-left border w-fit mt-2 p-1 bg-gray-800 hover:bg-gray-600 " href="contact.html">Contact Info</a>
@@ -80,8 +80,9 @@
 
     <section>
         <div class="mt-16 paused ">
-            <h1 class="text-5xl my-2 scrollHide">Portfolio</h1>
-            <div class="scroller flex flex-col">
+            <h1 class="text-5xl my-2 scrollHide text-center mb-8">Portfolio</h1>
+            <div class="border mb-16"></div>
+            <div class="scroller flex flex-col md:mx-auto">
                 <div class="tag-list scroller__inner portfolio">
                     <img class="self-start" src="github-color-svgrepo-com.svg" width="250" height="250" alt="placeholder image">
                 </div>

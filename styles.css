@@ -81,13 +81,13 @@ body{
     z-index: 0;
 }
 .scroller{
-    max-width: 100%;
+    max-width: 1600px;
 }
 .scroller__inner{
     padding-block: 1rem ;
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 4rem;
 }
 .scroller[data-animated="true"]{
     overflow: hidden;
@@ -121,7 +121,7 @@ body{
     --_animation-duration: 120s;
 }
 .scroller[data-duration="fast"]{
-    --_animation-duration: 20s; 
+    --_animation-duration: 10s; 
 }
 .scroller[data-animation="stop"]{
     --_animated: paused;
@@ -132,7 +132,7 @@ body{
 
 @keyframes scroll {
     to {
-        transform: translate(calc(-33.3% - 1rem));
+        transform: translate(calc(-50% - 2rem));
     }
 }
 .portfolio div{
