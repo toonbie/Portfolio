@@ -213,8 +213,64 @@ function scrollTextAnimate(){
     const hiddenElement= document.querySelectorAll(".scrollHide");
     hiddenElement.forEach((element)=> observer.observe(element));
 }
+
+
+
+function formValidate(){
+    const firstName = document.getElementById("firstName")
+    const lastName = document.getElementById("lastName")
+    const subject = document.getElementById("subject")
+    const message = document.getElementById("message")
+    const error = document.querySelector(".error")
+    const form = document.querySelector("form")
+    form.addEventListener(`submit`,(e)=>{
+        let errors = []
+        if(firstName.value=== '' || firstName.value === null ){
+            errors.push("First name is required")
+        }
+
+        if(lastName.value=== '' || lastName.value === null ){
+            errors.push("Last name is required")
+        }
+
+        if (subject.value ==='' || subject.value=== null){
+            errors.push("Subject is required")
+        }
+        if (subject.value ==='' || subject.value=== null){
+            errors.push("Subject is required")
+        }else if(subject.value.length >= 100){
+            errors.push(`Subject needs to be less than 100 characters ${subject.value.length} characters`)
+        }
+        else if(subject.value.length <= 5){
+            errors.push(`Subject needs to be longer than 5 characters ${subject.value.length} characters`)
+        }
+
+        if (message.value ==='' || message.value=== null){
+            errors.push('Message is required')
+        }else if(message.value.length >= 500){
+            errors.push(`Message needs to be less than 500 characters ${message.value.length}`)
+        }
+
+        if (errors.length>0){
+            e.preventDefault()
+            error.textContent = errors.join(', ')
+        }
+        
+
+
+
+    })
+}
+if (document.URL.includes("index.html")){
+    getJson()
+    videoControl()
+    scrollerButtons()
+}
+if (document.URL.includes("contact.html")){
+    formValidate()
+}
+
+
 scrollTextAnimate()
-getJson()
 navButton()
 videoControl()
-scrollerButtons()
