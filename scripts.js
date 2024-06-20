@@ -38,7 +38,7 @@ function portfolio(project){
         <div>
             <button class="moreInfo border bg-gray-500 hover:bg-gray-300 p-1 info" aria-label="more information">More Info</button>
             <a class="ml-24 text-right" href="${project.github}" target="_blank" aria-label="github Link"><i class="text-right fa-brands fa-github"alt="github icon"></i></a>
-            <a class="text-right" href="${project.link}" target="_blank" aria-label="Project link"><i class="text-right fa-regular fa-file" alt="page icon"></i></a><br>
+            <a class="text-right" href="${project.link}" target="_blank" aria-label="Project link"> <i class="text-right fa-regular fa-file" alt="page icon"></i></a><br>
         </div>
     
         <p class="toggle hidden">Contributors:${project.contributors}</p>
@@ -91,10 +91,10 @@ function setNewPageButton(projects){
                     <div class="w-screen grid grid-cols-3 items-center gap-2 sm:text-2xl justify-items-center sm:m-8">
                         <p class="">Contributors:</p>
                         <p class="">${projectMatch.contributors}</p>
-                        <a class=" text-center w-fit" href="${projectMatch.github}" target="_blank"><i class="text-right fa-brands fa-github"></i></a>
+                        <a class=" text-center w-fit" href="${projectMatch.github}" target="_blank"> Github <i class="text-right fa-brands fa-github"></i></a>
                         <p class="">Dependencies:</p>
                         <p class="">${projectMatch.dependencies}</p>
-                        <a class=" text-center w-fit" href="${projectMatch.link}" target="_blank"><i class="text-right fa-regular fa-file"></i></a><br>
+                        <a class=" text-center w-fit" href="${projectMatch.link}" target="_blank"> Direct Link <i class="text-right fa-regular fa-file"></i></a><br>
                     </div>
                 </div>
                 </body>
