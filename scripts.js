@@ -159,13 +159,13 @@ function videoControl(){
                 video.pause()
                 control.classList.toggle("pause")
                 control.classList.toggle("play")
-                control.innerHTML = `<i class="fa-solid fa-pause"></i>`
+                control.innerHTML = `<i class="fa-solid fa-pause"></i> Play`
             }
             else if(control.classList.contains("play")){
                 video.play()
                 control.classList.toggle("pause")
                 control.classList.toggle("play")
-                control.innerHTML = `<i class="fa-solid fa-play"></i>`
+                control.innerHTML = `<i class="fa-solid fa-play"></i> Pause`
             }
         });
 

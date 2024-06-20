@@ -108,26 +108,30 @@ body{
 .scroller[data-animated="true"] .scroller__inner{
     width: max-content;
     flex-wrap: nowrap;
-    animation: scroll var(--_animation-duration, 30s) var(--_animation-direction, forwards)linear var(--_animated,infinite);
+    animation: scroll var(--_animation-duration, 30s) var(--_animation-direction, forwards) linear var(--_animated,infinite);
 }
-.scroller[data-direction="right"]{
+.scroller[data-animated="true"] .scroller__inner:hover {
+    animation-play-state: paused;
+}
+.scroller[data-direction="right"] .scroller__inner{
     --_animation-direction: reverse;
 }
-.scroller[data-direction="left"]{
+.scroller[data-direction="left"] .scroller__inner{
     --_animation-direction: forwards;
 }
-.scroller[data-duration="slow"]{
-    --_animation-duration: 120s;
+.scroller[data-duration="slow"] .scroller__inner{
+    --_animation-duration: 60s;
 }
-.scroller[data-duration="fast"]{
-    --_animation-duration: 10s; 
+.scroller[data-duration="fast"] .scroller__inner{
+    --_animation-duration: 7s; 
 }
-.scroller[data-animation="stop"]{
-    --_animated: paused;
+.scroller[data-animation="stop"] .scroller__inner{
+    animation-play-state: paused;
 }
-.scroller[data-animation="play"]{
-    --_animated: infinite;
+.scroller[data-animation="play"] .scroller__inner{
+    animation-play-state: running;
 }
+
 
 @keyframes scroll {
     to {
