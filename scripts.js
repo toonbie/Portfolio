@@ -33,7 +33,7 @@ function portfolio(project){
     const portfolio = document.querySelector(".portfolio")
     portfolio.innerHTML += 
     `
-    <div class="flex flex-col">
+    <div class="flex flex-col h-[300px]">
         <button class="newPage hover:underline" aria-label="Put portfolio onto new page">
         <h1 class="title">${project.title}</h1>
         <div>
@@ -263,22 +263,17 @@ function formValidate(){
             e.preventDefault()
             error.textContent = errors.join(', ')
         }
-        
-
-
-
     })
 }
+
+videoControl()
+scrollTextAnimate()
+navButton()
 if (document.URL.includes("index.html")){
     getJson()
-    videoControl()
     scrollerButtons()
 }
 if (document.URL.includes("contact.html")){
     formValidate()
 }
 
-
-scrollTextAnimate()
-navButton()
-videoControl()

@@ -132,7 +132,7 @@ body{
 
 @keyframes scroll {
     to {
-        transform: translate(calc(-33% - 1rem));
+        transform: translate(calc(-33.3% - 1rem));
     }
 }
 .portfolio div{
