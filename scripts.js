@@ -60,7 +60,7 @@ function setPortfolioButton(){
             alertField.forEach((field)=>{
                 field.classList.toggle("hidden")
             })
-
+            
         })
     });
 }
@@ -80,9 +80,8 @@ function setNewPageButton(projects){
         refreshers = document.body.querySelectorAll(".home")
         refreshers.forEach((button)=>{
             button.href="javascript:location.reload(true)";
-        });
+        })
         const header = document.body.querySelector("header").innerHTML
-        refreshers = document.body.querySelectorAll(".home")
         button.addEventListener("click",(e)=>{
             var opened = window.open("",target="_parent");
             opened.document.write(
@@ -134,13 +133,13 @@ function navButton(){
     const menu = document.querySelector(".floatingNav")
     const downloads = document.querySelectorAll(".download")
     navButton.addEventListener("click",(e)=>{
-        menu.classList.toggle("hidden")
+        menu.classList.toggle("customHidden")
     })
     mobileHome.addEventListener("click",(e)=>{
-        menu.classList.toggle("hidden")
+        menu.classList.toggle("customHidden")
     })
     navClose.addEventListener("click",(e)=>{
-        menu.classList.toggle("hidden")
+        menu.classList.toggle("customHidden")
     })
     downloads.forEach((download)=>{
         download.addEventListener("click",(e)=>{

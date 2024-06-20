@@ -19,12 +19,24 @@ body{
 .navBarMain{
     z-index: 2;
 }
+.floatingNav{
+    transform: translateX(0);
+    display: absolute;
+    opacity: 1;
+    transition: all , 1s;
+}
+.customHidden{
+    transform: translateX(100%);
+    opacity: 0;
+    display: none;
+}
+
 .scrollHide{
     opacity: 0;
     filter:blur(5px);
     transform: translateY(100%);
     color: grey;
-    transition: all , 1s;
+    transition: all , 0.5s;
 }
 .logo:nth-child(2){
     transition-delay: 200ms;
