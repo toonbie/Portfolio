@@ -36,7 +36,9 @@ function portfolio(project){
     <div class="flex flex-col">
         <button class="newPage hover:underline" aria-label="Put portfolio onto new page">
         <h1 class="title">${project.title}</h1>
-        <img src="${project.image}" height=150px width=200px alt="Screenshot of portfolio">
+        <div>
+        <img class="transition-transform hover:scale-125 duration-700" src="${project.image}  height=150px width=200px alt="Screenshot of portfolio">
+        </div>
         <p>${project.description}</p>
         </button>
         <div>
@@ -88,14 +90,16 @@ function setNewPageButton(projects){
                 ${head}
                 ${header}
                 <body class="bg-cover bg-gradient-to-b from-black to-gray-900">
-                <div class="flex flex-col gap-8 mt-16 items-center content-center mx-8">
+                <div class="flex flex-col gap-8 mt-16 items-center mx-8">
                     <h1 class="w-screen title text-5xl text-center">${projectMatch.title}</h1>
                     <img class="w-screen" src="${projectMatch.image} ">
                         <p class="text-2xl">${projectMatch.description}</p>
-                    <div class=" grid grid-cols-2 items-center gap-2 text-2xl justify-items-center m-8">
-                        <p>Contributors:${projectMatch.contributors}</p>
+                    <div class="w-screen grid grid-cols-3 items-center gap-2 sm:text-2xl justify-items-center sm:m-8">
+                        <p class="">Contributors:</p>
+                        <p class="">${projectMatch.contributors}</p>
                         <a class=" text-center w-fit" href="${projectMatch.github}"><i class="text-right fa-brands fa-github"></i></a>
-                        <p>Dependencies:${projectMatch.dependencies}</p>
+                        <p class="">Dependencies:</p>
+                        <p class="">${projectMatch.dependencies}</p>
                         <a class=" text-center w-fit" href="${projectMatch.link}"><i class="text-right fa-regular fa-file"></i></a><br>
                     </div>
                 </div>
