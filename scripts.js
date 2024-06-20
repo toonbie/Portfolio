@@ -43,8 +43,8 @@ function portfolio(project){
         </button>
         <div>
             <button class="moreInfo border bg-gray-500 hover:bg-gray-300 p-1 info" aria-label="more information">More Info</button>
-            <a class="ml-24 text-right" href="${project.github}" aria-label="github Link"><i class="text-right fa-brands fa-github"alt="github icon"></i></a>
-            <a class="text-right" href="${project.link}" aria-label="Project link"><i class="text-right fa-regular fa-file" alt="page icon"></i></a><br>
+            <a class="ml-24 text-right" href="${project.github}" target="_blank" aria-label="github Link"><i class="text-right fa-brands fa-github"alt="github icon"></i></a>
+            <a class="text-right" href="${project.link}" target="_blank" aria-label="Project link"><i class="text-right fa-regular fa-file" alt="page icon"></i></a><br>
         </div>
     
         <p class="toggle hidden">Contributors:${project.contributors}</p>
@@ -77,13 +77,14 @@ function setNewPageButton(projects){
         })
         const head = document.head.innerHTML
         head.title = projectMatch.title
-        refreshers = document.body.querySelectorAll(".home")
-        refreshers.forEach((button)=>{
-            button.href="javascript:location.reload(true)";
-        })
-        const header = document.body.querySelector("header").innerHTML
         button.addEventListener("click",(e)=>{
+            refreshers = document.body.querySelectorAll(".home")
+            refreshers.forEach((button)=>{
+                button.href="javascript:location.reload(true)";
+            })
+            const header = document.body.querySelector("header").innerHTML
             var opened = window.open("",target="_parent");
+
             opened.document.write(
                 `
                 ${head}
@@ -96,10 +97,10 @@ function setNewPageButton(projects){
                     <div class="w-screen grid grid-cols-3 items-center gap-2 sm:text-2xl justify-items-center sm:m-8">
                         <p class="">Contributors:</p>
                         <p class="">${projectMatch.contributors}</p>
-                        <a class=" text-center w-fit" href="${projectMatch.github}"><i class="text-right fa-brands fa-github"></i></a>
+                        <a class=" text-center w-fit" href="${projectMatch.github}" target="_blank"><i class="text-right fa-brands fa-github"></i></a>
                         <p class="">Dependencies:</p>
                         <p class="">${projectMatch.dependencies}</p>
-                        <a class=" text-center w-fit" href="${projectMatch.link}"><i class="text-right fa-regular fa-file"></i></a><br>
+                        <a class=" text-center w-fit" href="${projectMatch.link}" target="_blank"><i class="text-right fa-regular fa-file"></i></a><br>
                     </div>
                 </div>
                 </body>
@@ -132,6 +133,7 @@ function navButton(){
     const navClose = document.querySelector(".navClose")
     const menu = document.querySelector(".floatingNav")
     const downloads = document.querySelectorAll(".download")
+    const logo = document.querySelector(".logo")
     navButton.addEventListener("click",(e)=>{
         menu.classList.toggle("customHidden")
     })
@@ -139,6 +141,9 @@ function navButton(){
         menu.classList.toggle("customHidden")
     })
     navClose.addEventListener("click",(e)=>{
+        menu.classList.toggle("customHidden")
+    })
+    logo.addEventListener("click",(e)=>{
         menu.classList.toggle("customHidden")
     })
     downloads.forEach((download)=>{
