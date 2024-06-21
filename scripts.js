@@ -129,16 +129,20 @@ function navButton(){
     const downloads = document.querySelectorAll(".download")
     const logo = document.querySelector(".logo")
     navButton.addEventListener("click",(e)=>{
-        menu.classList.toggle("customHidden")
+        menu.classList.toggle("hidden")
+
     })
     mobileHome.addEventListener("click",(e)=>{
-        menu.classList.toggle("customHidden")
+        menu.classList.toggle("hidden")
+
     })
     navClose.addEventListener("click",(e)=>{
-        menu.classList.toggle("customHidden")
+        menu.classList.toggle("hidden")
+
     })
     logo.addEventListener("click",(e)=>{
-        menu.classList.toggle("customHidden")
+        menu.classList.toggle("hidden")
+
     })
     downloads.forEach((download)=>{
         download.addEventListener("click",(e)=>{

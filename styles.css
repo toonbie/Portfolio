@@ -19,17 +19,6 @@ body{
 .navBarMain{
     z-index: 2;
 }
-.floatingNav{
-    transform: translateX(0);
-    display: absolute;
-    opacity: 1;
-    transition: all 0.5s;
-}
-.customHidden{
-    transform: translateX(100%);
-    opacity: 0;
-    display: none;
-}
 
 .scrollHide{
     opacity: 0;
