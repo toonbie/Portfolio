@@ -71,6 +71,7 @@ function setNewPageButton(projects){
         })
         const head = document.head.innerHTML
         head.title = projectMatch.title
+        const footer = document.body.querySelector("footer").innerHTML
         button.addEventListener("click",(e)=>{
             refreshers = document.body.querySelectorAll(".home")
             refreshers.forEach((button)=>{
@@ -98,6 +99,9 @@ function setNewPageButton(projects){
                     </div>
                 </div>
                 </body>
+                <footer class="w-full h-[50px] border-t bg-cover bg-gray-700">
+                    ${footer}
+                </footer>
                 `
                 
             );
