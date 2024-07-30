@@ -151,7 +151,7 @@ function navButton(){
     downloads.forEach((download)=>{
         download.addEventListener("click",(e)=>{
             if (confirm("Are you sure you want to download? ")){
-                window.location.href ="https://docs.google.com/document/d/1NIwV-LoZozqXWVzZdNX5I7DG3yiQwx_x/edit?usp=sharing&ouid=106698212685993672604&rtpof=true&sd=true"
+                window.location.href ="https://rxresu.me/milanburny/cv"
             }else{
             }
         })
