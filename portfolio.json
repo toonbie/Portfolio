@@ -1,11 +1,11 @@
 {
     "projects": [
       {
-        "title":"Title1",
+        "title":"Portfolio",
         "description":"The Portfolio website",
-        "image":"https://placeholder.pics/svg/250x150",
+        "image":"portfolioPreview.jpeg",
         "github":"https://github.com/toonbie/Portfolio",
-        "link":"https://github.com/toonbie/Portfolio",
+        "link":"https://2024-milanf.dev.io-academy.uk/Portfolio/index.html",
         "contributors":"Milan Fernando",
         "dependencies":"None"
       },

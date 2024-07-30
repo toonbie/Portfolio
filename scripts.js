@@ -31,7 +31,7 @@ function portfolio(project){
         <button class="newPage hover:underline" aria-label="Put portfolio onto new page">
         <h1 class="title">${project.title}</h1>
         <div>
-        <img class="transition-transform hover:scale-125 duration-700" src="${project.image}  height=150px width=200px alt="Screenshot of portfolio">
+        <img class="transition-transform hover:scale-125 duration-700" src="${project.image}"  height=150px width=200px alt="Screenshot of portfolio">
         </div>
         <p>${project.description}</p>
         </button>
