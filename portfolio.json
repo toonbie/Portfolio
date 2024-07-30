@@ -6,26 +6,26 @@
         "image":"portfolioPreview.jpeg",
         "github":"https://github.com/toonbie/Portfolio",
         "link":"https://2024-milanf.dev.io-academy.uk/Portfolio/index.html",
-        "contributors":"Milan Fernando",
+        "contributors":"Milan Fernando(toonbie)",
         "dependencies":"None"
       },
       {
-        "title":"Title2",
-        "description":"The Portfolio website",
-        "image":"https://placeholder.pics/svg/250x150",
-        "github":"https://github.com/toonbie/Portfolio",
-        "link":"https://github.com/toonbie/Portfolio",
-        "contributors":"Milan Fernando",
-        "dependencies":"None"
+        "title":"Invoice",
+        "description":"A website for managing invoices",
+        "image":"invoicePreview.png",
+        "github":"https://github.com/iO-Academy/2024-may-invoicing-sloth-rockets",
+        "link":"https://2024-may-sde-invoicing-sloth-rockets.dev.io-academy.uk/",
+        "contributors":"Milan Fernando(toonbie), Alathea95 , will-atkinson02 , vgreig , mmwk183",
+        "dependencies":"419 Total"
       },
       {
-        "title":"Title3",
-        "description":"The Portfolio website",
-        "image":"https://placeholder.pics/svg/250x150",
-        "github":"https://github.com/toonbie/Portfolio",
-        "link":"https://github.com/toonbie/Portfolio",
-        "contributors":"Milan Fernando",
-        "dependencies":"None"
+        "title":"Music Player",
+        "description":"A website kinda like spotify",
+        "image":"musicPlayerPreview.png",
+        "github":"https://github.com/iO-Academy/2024-may-music-player-hungry-hungry-caterpillars",
+        "link":"https://2024-may-sde-music-player-hungry-hungry-caterpillars.dev.io-academy.uk/",
+        "contributors":"Milan Fernando(toonbie), FloCRC , Jollion81 , seonaiddavis , mmwk183 ",
+        "dependencies":"29 Total"
       },
       {
         "title":"Title4",
